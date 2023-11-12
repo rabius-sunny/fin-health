@@ -14,6 +14,7 @@
     "@types/react-dom": "^18.2.15",
     "axios": "^1.6.1",
     "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -30,15 +31,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-expressions": "off"
-    }
   },
   "browserslist": {
     "production": [

@@ -1,17 +1,7 @@
 import { AxiosResponse } from 'axios'
-import { useAppSelector } from 'hooks/redux'
-import instance from 'lib/axiosinstance'
+import useInstance from 'lib/axiosinstance'
 
-const token = useAppSelector((state) => state.auth.token)
-
-// Request interceptor
-instance.interceptors.request.use(function (config) {
-  if (config.url !== '/sign-in' && token) {
-    config.headers.Authorization = `Bearer ${token}`
-  }
-  return config
-})
-
+const instance = useInstance()
 const responseBody = (response: AxiosResponse) => response.data
 
 const requests = {
@@ -22,7 +12,7 @@ const requests = {
   patch: (url: string, body: object, config?: object) =>
     instance.patch(url, body, config).then(responseBody),
   delete: (url: string, config?: object) =>
-    instance.delete(url, config).then(responseBody)
+    instance.delete(url, config).then(responseBody),
 }
 
 export default requests

@@ -10,20 +10,29 @@ const Auth = lazy(() => import('pages/Auth'))
 export default function Routings() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path='/login' element={<Auth />} />
-          <Route
-            index
-            path='/'
-            element={
-              <PrivateRoute>
+      <Routes>
+        <Route
+          path='/'
+          index
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route path='/login' element={<Auth />} />
+        {/* <Route
+          index
+          path='/'
+          element={
+            <PrivateRoute>
+              <Layout>
                 <Home />
-              </PrivateRoute>
-            }
-          />
-        </Routes>
-      </Layout>
+              </Layout>
+            </PrivateRoute>
+          }
+        /> */}
+      </Routes>
     </BrowserRouter>
   )
 }

@@ -1,10 +1,11 @@
-import requests from 'services/network/http'
-import { IAuth, IUser } from './../../../index.d'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import requests from 'services/network/http'
+
+import { IAuth, IUser } from './../../../index.d'
 
 const initialState = {
   token: '',
-  authStatus: 'idle'
+  authStatus: 'idle',
 } as IAuth
 
 export const signinUser = createAsyncThunk(
@@ -25,7 +26,7 @@ const authSlice = createSlice({
     },
     resetAuthStatus(state) {
       state.authStatus = 'idle'
-    }
+    },
   },
   extraReducers(builder) {
     builder.addCase(signinUser.fulfilled, (state, action) => {
@@ -38,7 +39,7 @@ const authSlice = createSlice({
       builder.addCase(signinUser.rejected, (state) => {
         state.authStatus = 'error'
       })
-  }
+  },
 })
 
 export const { logout, resetAuthStatus } = authSlice.actions
