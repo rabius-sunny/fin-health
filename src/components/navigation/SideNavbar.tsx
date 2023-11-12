@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from 'framer-motion'
 import { Slack } from 'lucide-react'
 import { Link } from 'react-router-dom'
