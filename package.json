@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tremor/react": "^3.11.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.61",
     "@types/react": "^18.2.37",
@@ -15,9 +16,12 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-redux": "^8.1.3",
+    "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
+    "redux-persist-transform-encrypt": "^5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -49,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.53.0",
